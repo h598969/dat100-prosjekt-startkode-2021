@@ -20,7 +20,7 @@ public class KortSamling {
 	/**
 	* Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
 	*/
-	
+	//Sivert
 	public KortSamling() {
 		
 		Kort[] samling = new Kort[MAKS_KORT];
@@ -35,6 +35,7 @@ public class KortSamling {
 	 * 
 	 * @return tabell av kort.
 	 */
+	//Anders
 	public Kort[] getSamling() {
 		
 		return samling;
@@ -46,6 +47,7 @@ public class KortSamling {
 	 * 
 	 * @return antall kort i samlinga.
 	 */
+	
 	public int getAntalKort() {
 		
 		return samling.length;
@@ -56,6 +58,7 @@ public class KortSamling {
 	 * 
 	 * @return true om samlinga er tom, false ellers.
 	 */
+	//Sivert
 	public boolean erTom() {
 		boolean tom = false;
 		for (int i=0; i<samling.length; i++) {
@@ -73,6 +76,7 @@ public class KortSamling {
 	 * @param kort
 	 *            er kortet som skal leggast til.
 	 */
+	//Anders
 	public void leggTil(Kort kort) {
 		int i=0;
 		if (samling[i] != null) {
@@ -86,6 +90,7 @@ public class KortSamling {
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
 	 * slik at de normalt må stokkes før bruk.
 	 */
+	//Sivert
 	public void leggTilAlle() {
 		
 		// TODO - START
@@ -98,6 +103,7 @@ public class KortSamling {
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
+	//Anders
 	public void fjernAlle() {
 		
 		// TODO - START
@@ -112,6 +118,7 @@ public class KortSamling {
 	 * @return siste kortet i samlinga, men det blir ikke fjernet. Dersom samalinga er tom, returneres
 	 *         null.
 	 */
+	//Sivert
 	public Kort seSiste() {
 		
 		// TODO - START
@@ -128,6 +135,7 @@ public class KortSamling {
 	 * @return siste kortet i samlinga. Dersom samalinga er tom, returneres
 	 *         null.
 	 */
+	//Anders
 	public Kort taSiste() {
 		
 		// TODO - START
@@ -144,6 +152,7 @@ public class KortSamling {
 	 * 
 	 * @return true om kortet finst i samlinga, false ellers.
 	 */
+	//Sivert
 	public boolean har(Kort kort) {
 		
 		// TODO - START
@@ -163,7 +172,7 @@ public class KortSamling {
 	 *            ingenting.
 	 * @return true om kortet blev fjernet fra samlinga, false ellers.
 	 */
-			 
+	//Anders		 
 	public boolean fjern(Kort kort) {
 		
 		// TODO - START
@@ -179,6 +188,7 @@ public class KortSamling {
 	 * @return tabell av kort som er i samlingen, der kort skal ha samme rekkefølge
 	 *         som i kortsamlinga.
 	 */
+	//Sivert
 	public Kort[] getAllekort() {
 		
 		// TODO - START
