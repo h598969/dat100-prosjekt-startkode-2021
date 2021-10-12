@@ -60,10 +60,10 @@ public class KortSamling {
 	 */
 	//Sivert
 	public boolean erTom() {
-		boolean tom = false;
+		boolean tom = true;
 		for (int i=0; i<samling.length; i++) {
-			if (samling[i] == null) {
-				tom = true;
+			if (samling[i] != null) {
+				tom = false;
 			}
 		}
 		return tom;
