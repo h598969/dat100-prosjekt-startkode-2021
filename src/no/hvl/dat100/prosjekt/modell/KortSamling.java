@@ -58,8 +58,10 @@ public class KortSamling {
 	 */
 	public boolean erTom() {
 		boolean tom = false;
-		if (samling==null) {
-			tom = true;
+		for (int i=0; i<samling.length; i++) {
+			if (samling[i] == null) {
+				tom = true;
+			}
 		}
 		return tom;
 		
