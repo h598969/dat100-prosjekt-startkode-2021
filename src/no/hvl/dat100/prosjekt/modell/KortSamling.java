@@ -23,7 +23,7 @@ public class KortSamling {
 	//Sivert
 	public KortSamling() {
 		
-		Kort[] samling = new Kort[MAKS_KORT];
+		this.samling = new Kort[MAKS_KORT];
 	}
 
 	/**
@@ -60,13 +60,19 @@ public class KortSamling {
 	 */
 	//Sivert
 	public boolean erTom() {
-		boolean tom = true;
+		/*boolean tom = true;
 		for (int i=0; i<samling.length; i++) {
 			if (samling[i] != null) {
 				tom = false;
 			}
 		}
-		return tom;
+		return tom;*/
+		for (int i=0; i<samling.length; i++) { 
+			if (samling[i] != null) {
+				return false;
+			}
+		}
+		return true;
 		
 	}
 
@@ -93,11 +99,9 @@ public class KortSamling {
 	//Sivert
 	public void leggTilAlle() {
 		
-		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		
 	}
 
 	/**
