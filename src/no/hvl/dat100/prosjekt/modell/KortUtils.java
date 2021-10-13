@@ -17,10 +17,32 @@ public class KortUtils {
 	
 	public static void sorter(KortSamling samling) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		int length=samling.getAntalKort();
+		Kort[] temp=new Kort[length];
+		Kort[] samlingTemp= samling.getAllekort();
+		for(int i=0; i<length; i++) {
+			int minPos=0;
+			for(int j=1;j<length; j++) {
+				int tall=samlingTemp[j].compareTo(samlingTemp[minPos]);
+				if (tall<0) {
+					minPos=j;
+				}
+				
+			}
+			temp[i]=samlingTemp[minPos];
+		}
+		samling.fjernAlle();
+		for(int i=0; i<length; i++) {
+			int minPos=0;
+			for(int j=1;j<length; j++) {
+				int tall=temp[j].compareTo(temp[minPos]);
+				if (tall<0) {
+					minPos=j;
+				}
+				
+			}
+			samling.leggTil(temp[minPos]);
+		}
 	}
 	
 	/**
@@ -30,11 +52,22 @@ public class KortUtils {
 	 * 			samling av kort som skal stokkes. 
 	 */
 	public static void stokk(KortSamling samling) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		int length=samling.getAntalKort();
+		Kort[] temp=samling.getSamling();
+		Kort[] stokket=new Kort[length];
+		Random rand=new Random();
+		for (int i=0; i<length; i++) {
+			int tall;
+			do{
+				tall = rand.nextInt(length);
+			}while(stokket[tall]!=null);
+			stokket[tall]=temp[i];
+			
+		}
+		samling.fjernAlle();
+		for(int i=0; i<length; i++){
+		samling.leggTil(stokket[i]);
+		}
 	}
 	
 }
