@@ -84,13 +84,10 @@ public class KortSamling {
 	 */
 	//Anders
 	public void leggTil(Kort kort) {
-		int i=0;
-		if (samling[i] != null) {
-			i=i+1;
+	
+		samling[0] = kort;
+			
 		}
-		samling[i] = kort;
-		
-	}
 	
 	/**
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
@@ -110,10 +107,10 @@ public class KortSamling {
 	//Anders
 	public void fjernAlle() {
 		
-		// TODO - START
+		for(int i = 0; i<samling.length; i++) {
+			samling[i]= null;
+		}
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
 	}
 	
 	/**
@@ -141,12 +138,9 @@ public class KortSamling {
 	 */
 	//Anders
 	public Kort taSiste() {
+	
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+	
 	}
 	
 	/**
