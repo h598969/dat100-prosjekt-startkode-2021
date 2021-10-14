@@ -85,7 +85,8 @@ public class KortSamling {
 	//Anders
 	public void leggTil(Kort kort) {
 	
-		samling[0] = kort;
+		
+		
 			
 		}
 	
@@ -108,10 +109,17 @@ public class KortSamling {
 	public void fjernAlle() {
 		
 		for(int i = 0; i<samling.length; i++) {
-			samling[i]= null;
+			
+			samling[i]=null; 
+			
+			}
+			
 		}
 		
-	}
+	
+	
+		
+
 	
 	/**
 	 * Ser på siste kortet i samlinga.
@@ -173,11 +181,9 @@ public class KortSamling {
 	//Anders		 
 	public boolean fjern(Kort kort) {
 		
-		// TODO - START
+		boolean fjernet = false;
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		
 	}
 
 	/**
