@@ -101,7 +101,11 @@ public class KortSamling {
 	 */
 	//Sivert
 	public void leggTilAlle() {
-		
+		for (Kortfarge i : Kortfarge.values()) {
+			for (int j = 1; j<=Regler.MAKS_KORT_FARGE; j++) {
+				samling[i] = new Kort(i,j);
+			}
+		}
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
 		
 		
@@ -118,7 +122,7 @@ public class KortSamling {
 			samling[i]=;
 			}
 		}
-		}
+	}
 		
 	
 	
