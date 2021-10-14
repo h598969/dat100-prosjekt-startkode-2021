@@ -108,8 +108,8 @@ public class KortSamling {
 	//Anders
 	public void fjernAlle() {
 		
+		
 		for(int i = 0; i<samling.length; i++) {
-			
 			samling[i]=null; 
 			
 			}
@@ -181,7 +181,13 @@ public class KortSamling {
 	//Anders		 
 	public boolean fjern(Kort kort) {
 		
-		boolean fjernet = false;
+		for(int i=0; i<samling.length; i++) {
+			if(samling[i] == kort) {
+				kort=null;
+			return true;
+			
+			}
+		}return false;
 		
 		
 	}
