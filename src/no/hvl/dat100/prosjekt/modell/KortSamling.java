@@ -50,7 +50,7 @@ public class KortSamling {
 	
 	public int getAntalKort() {
 		
-		return samling.length;
+		return antall;
 	}
 	
 	/**
@@ -108,12 +108,11 @@ public class KortSamling {
 	//Anders
 	public void fjernAlle() {
 		
-		
 		for(int i = 0; i<samling.length; i++) {
-			samling[i]=null; 
-			
+			if(samling[i] == samling[MAKS_KORT]) {
+			samling[i]=;
 			}
-			
+		}
 		}
 		
 	
@@ -182,8 +181,8 @@ public class KortSamling {
 	public boolean fjern(Kort kort) {
 		
 		for(int i=0; i<samling.length; i++) {
-			if(samling[i] == kort) {
-				kort=null;
+			if(samling[i] == kort ) {
+				kort=0;
 			return true;
 			
 			}
