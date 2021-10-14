@@ -85,11 +85,11 @@ public class KortSamling {
 	//Anders
 	public void leggTil(Kort kort) {
 	
-		boolean lagtTil = false;
+int length = samling.length;
 		
-		if(antall<samling.length) {
-			samling[antall] = kort;
-			lagtTil = true;
+		samling = Arrays.copyOf(samling, length+1);
+		samling[length - 1] = kort;
+
 		}
 		
 			
@@ -117,6 +117,7 @@ public class KortSamling {
 	//Anders
 	public void fjernAlle() {
 		
+<<<<<<< Updated upstream
 		for(int i = 0; i<samling.length; i++) {
 			if(samling[i] = {
 			samling[i]=;
@@ -124,6 +125,10 @@ public class KortSamling {
 		}
 	}
 		
+=======
+		samling = new Kort[MAKS_KORT];
+	}
+>>>>>>> Stashed changes
 	
 	
 		
@@ -155,7 +160,15 @@ public class KortSamling {
 	//Anders
 	public Kort taSiste() {
 	
+int length = samling.length;
 		
+		if (seSiste() == null)
+			return null;
+		
+		Kort siste = samling[length - 1]; 
+		samling = Arrays.copyOf(samling, length - 1);
+		
+		return siste;
 	
 	}
 	
