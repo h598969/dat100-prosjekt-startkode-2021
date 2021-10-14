@@ -85,10 +85,15 @@ public class KortSamling {
 	//Anders
 	public void leggTil(Kort kort) {
 	
+		boolean lagtTil = false;
 		
+		if(antall<samling.length) {
+			samling[antall] = kort;
+			lagtTil = true;
+		}
 		
 			
-		}
+	}
 	
 	/**
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
@@ -109,7 +114,7 @@ public class KortSamling {
 	public void fjernAlle() {
 		
 		for(int i = 0; i<samling.length; i++) {
-			if(samling[i] == samling[MAKS_KORT]) {
+			if(samling[i] = {
 			samling[i]=;
 			}
 		}
