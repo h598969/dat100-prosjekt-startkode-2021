@@ -117,19 +117,7 @@ int length = samling.length;
 	//Anders
 	public void fjernAlle() {
 		
-<<<<<<< Updated upstream
-		for(int i = 0; i<samling.length; i++) {
-			if(samling[i] = {
-			samling[i]=;
-			}
-		}
-	}
-		
-=======
-		samling = new Kort[MAKS_KORT];
-	}
->>>>>>> Stashed changes
-	
+
 	
 		
 
