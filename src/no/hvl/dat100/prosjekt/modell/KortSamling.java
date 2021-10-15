@@ -93,7 +93,7 @@ int length = samling.length;
 		}
 		
 			
-	}
+	
 	
 	/**
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
@@ -117,7 +117,7 @@ int length = samling.length;
 	//Anders
 	public void fjernAlle() {
 		
-
+	}
 	
 		
 
