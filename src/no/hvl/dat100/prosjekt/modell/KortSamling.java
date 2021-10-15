@@ -146,11 +146,11 @@ public class KortSamling {
 //				break;
 //			}
 //		}
-		while (samling[neste] != null && samling[siste] != null) {
+		while (samling[neste] != null) {
 			siste++;
-			neste =+1;
+			neste++;
 		}
-		return sisteK;
+		return samling[siste];
 	}
 
 	/**
