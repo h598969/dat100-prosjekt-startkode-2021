@@ -161,15 +161,21 @@ public class KortSamling {
 	 */
 	//Anders
 	public Kort taSiste() {
+		int siste = samling.length-1;
+		Kort sisteK = null;
 		
 		if (seSiste() == null)
 			return null;
-		
-		Kort siste = samling[samling.length - 1]; 
-		//samling = Arrays.copyOf(samling, samling.length - 1);
+		sisteK = seSiste();
 		antall--;
+//		while (samling[siste] == null) {
+//			siste--;
+//			if (samling[siste] != null) {
+//				sisteK = samling[siste];
+//			}
+//		}
 		
-		return siste;
+		return sisteK;
 	
 	}
 	
