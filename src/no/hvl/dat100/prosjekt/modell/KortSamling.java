@@ -1,9 +1,8 @@
 package no.hvl.dat100.prosjekt.modell;
 
-
+import java.util.*;
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
-import java.util.Arrays;
 
 /**
  * Struktur for å lagre ei samling kort. Kan lagre hele kortstokken. Det finnes
@@ -87,8 +86,9 @@ public class KortSamling {
 	//Anders
 	public void leggTil(Kort kort) {
 	
-		int length = samling.length;
-		
+
+int length = samling.length;
+
 		samling = Arrays.copyOf(samling, length+1);
 		samling[length - 1] = kort;
 
@@ -122,7 +122,6 @@ public class KortSamling {
 	public void fjernAlle() {
 		
 	}
-		
 
 	
 		
