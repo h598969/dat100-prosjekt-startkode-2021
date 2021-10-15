@@ -117,7 +117,13 @@ public class KortSamling {
 	 */
 	//Anders
 	public void fjernAlle() {
-		
+		for (int i = 0; i<samling.length; i++) {
+			if (samling[i] != null) {
+				samling[i] = null;
+				antall-=1;
+			}
+
+		}
 	}
 
 	
@@ -174,6 +180,8 @@ int length = samling.length;
 		while (!har && i<samling.length) {
 			if (samling[i] == kort) {
 				har = true;
+			} else if (samling[i] == null) {
+				har = false;
 			}
 			i++;
 		}
@@ -197,7 +205,7 @@ int length = samling.length;
 		
 		for(int i=0; i<samling.length; i++) {
 			if(samling[i] == kort ) {
-				samling[i]=null;
+				samling[i]=samling[i-i];
 				antall-=1;
 			return true;
 			
