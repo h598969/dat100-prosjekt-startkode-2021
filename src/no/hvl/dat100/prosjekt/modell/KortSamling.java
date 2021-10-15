@@ -61,13 +61,6 @@ public class KortSamling {
 	 */
 	//Sivert
 	public boolean erTom() {
-		/*boolean tom = true;
-		for (int i=0; i<samling.length; i++) {
-			if (samling[i] != null) {
-				tom = false;
-			}
-		}
-		return tom;*/
 		for (int i=0; i<samling.length; i++) { 
 			if (samling[i] != null) {
 				return false;
@@ -108,7 +101,8 @@ public class KortSamling {
 	public void leggTilAlle() {
 		for (Kortfarge i : Kortfarge.values()) {
 			for (int j = 0; j<Regler.MAKS_KORT_FARGE; j++) {
-				samling[j] = new Kort(i,j);
+				//samling[j] = new Kort(i,j);
+				leggTil(new Kort(i,j));
 				antall++;
 				}
 			}
@@ -222,7 +216,9 @@ int length = samling.length;
 	//Sivert
 	public Kort[] getAllekort() {
 		Kort[] antallKort = new Kort[antall];
-		
+		for (int i = 0; i<antallKort.length; i++) {
+			antallKort[i] = samling[i];
+		}
 		return antallKort;
 	}
 	
