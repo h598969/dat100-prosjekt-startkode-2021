@@ -1,6 +1,5 @@
 package no.hvl.dat100.prosjekt.modell;
 
-import java.util.*;
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 
@@ -210,9 +209,9 @@ public class KortSamling {
 	public boolean fjern(Kort kort) {
 		
 		for(int i=0; i<samling.length; i++) {
-			if(samling[i] == kort ) {
-				samling[i]=samling[i-i];
-				antall-=1;
+			if(samling[i] == kort) {
+				samling[i]=null;
+				antall--;
 			return true;
 			
 			}
