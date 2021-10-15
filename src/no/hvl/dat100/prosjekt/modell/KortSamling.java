@@ -138,11 +138,19 @@ public class KortSamling {
 	 */
 	//Sivert
 	public Kort seSiste() {
-		if (samling[samling.length-1] == null) {
-			return null;
+		int siste = 0;
+		int neste = siste + 1;
+//		for (int i = samling.length-1; i>=0; i--) {
+//			if (samling[i] != null) {
+//				siste = samling[i];
+//				break;
+//			}
+//		}
+		while (samling[neste] != null && samling[siste] != null) {
+			siste++;
+			neste =+1;
 		}
-		return samling[samling.length-1];
-		
+		return sisteK;
 	}
 
 	/**
@@ -153,14 +161,13 @@ public class KortSamling {
 	 */
 	//Anders
 	public Kort taSiste() {
-	
-int length = samling.length;
 		
 		if (seSiste() == null)
 			return null;
 		
-		Kort siste = samling[length - 1]; 
-		samling = Arrays.copyOf(samling, length - 1);
+		Kort siste = samling[samling.length - 1]; 
+		//samling = Arrays.copyOf(samling, samling.length - 1);
+		antall--;
 		
 		return siste;
 	
