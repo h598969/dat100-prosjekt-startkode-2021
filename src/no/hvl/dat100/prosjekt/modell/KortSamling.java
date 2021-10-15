@@ -217,13 +217,9 @@ int length = samling.length;
 	 */
 	//Sivert
 	public Kort[] getAllekort() {
+		Kort[] antallKort = new Kort[antall];
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
-	
+		return antallKort;
 	}
 	
 }
