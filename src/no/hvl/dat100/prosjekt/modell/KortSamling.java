@@ -99,15 +99,16 @@ public class KortSamling {
 	 */
 	//Sivert
 	public void leggTilAlle() {
+		Kort nKort = null;
 		for (Kortfarge i : Kortfarge.values()) {
-			for (int j = 0; j<Regler.MAKS_KORT_FARGE; j++) {
+			for (int j = 1; j<=Regler.MAKS_KORT_FARGE; j++) {
 				//samling[j] = new Kort(i,j);
-				leggTil(new Kort(i,j));
+				nKort = new Kort(i,j);
 				antall++;
 				}
 			}
+		leggTil(nKort);
 		}
-
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
 		
 		
@@ -161,21 +162,19 @@ public class KortSamling {
 	 */
 	//Anders
 	public Kort taSiste() {
-		int siste = samling.length-1;
-		Kort sisteK = null;
 		
-		if (seSiste() == null)
-			return null;
-		sisteK = seSiste();
+		int siste = 0;
+		int neste = siste + 1;
+		while (samling[neste] != null) {
+			siste++;
+			neste++;
+		}
+		
+		Kort ref = samling[siste];
+		samling[siste] = null;
 		antall--;
-//		while (samling[siste] == null) {
-//			siste--;
-//			if (samling[siste] != null) {
-//				sisteK = samling[siste];
-//			}
-//		}
 		
-		return sisteK;
+		return ref;
 	
 	}
 	
