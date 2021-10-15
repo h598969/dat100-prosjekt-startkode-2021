@@ -203,7 +203,8 @@ int length = samling.length;
 		
 		for(int i=0; i<samling.length; i++) {
 			if(samling[i] == kort ) {
-				kort=0;
+				samling[i]=null;
+				antall-=1;
 			return true;
 			
 			}
