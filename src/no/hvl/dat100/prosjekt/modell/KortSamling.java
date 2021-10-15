@@ -1,5 +1,6 @@
 package no.hvl.dat100.prosjekt.modell;
 
+
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 
@@ -85,7 +86,7 @@ public class KortSamling {
 	//Anders
 	public void leggTil(Kort kort) {
 	
-int length = samling.length;
+		int length = samling.length;
 		
 		samling = Arrays.copyOf(samling, length+1);
 		samling[length - 1] = kort;
@@ -93,7 +94,7 @@ int length = samling.length;
 		}
 		
 			
-	}
+	
 	
 	/**
 	 * Legger alle korta (hele kortstokken) til samlinga. Korta vil være sortert
@@ -102,20 +103,24 @@ int length = samling.length;
 	//Sivert
 	public void leggTilAlle() {
 		for (Kortfarge i : Kortfarge.values()) {
-			for (int j = 1; j<=Regler.MAKS_KORT_FARGE; j++) {
-				samling.har(new Kort(i,j));
+			for (int j = 0; j<Regler.MAKS_KORT_FARGE; j++) {
+				samling[j] = new Kort(i,j);
+				antall++;
+				}
 			}
 		}
+
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
 		
 		
-	}
 
 	/**
 	 * Fjerner alle korta fra samlinga slik at den blir tom.
 	 */
 	//Anders
 	public void fjernAlle() {
+		
+	}
 		
 
 	
@@ -169,10 +174,15 @@ int length = samling.length;
 	 */
 	//Sivert
 	public boolean har(Kort kort) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+		boolean har = false;
+		int i = 0;
+		while (!har && i<samling.length) {
+			if (samling[i] == kort) {
+				har = true;
+			}
+			i++;
+		}
+		return har;
 		// return false;
 		// TODO - END
 		
