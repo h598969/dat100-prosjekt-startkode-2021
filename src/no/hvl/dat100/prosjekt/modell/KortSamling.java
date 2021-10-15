@@ -191,8 +191,6 @@ public class KortSamling {
 			i++;
 		}
 		return har;
-		// return false;
-		// TODO - END
 		
 	}
 
@@ -213,7 +211,6 @@ public class KortSamling {
 				samling[i]=null;
 				antall--;
 			return true;
-			
 			}
 		}return false;
 		
