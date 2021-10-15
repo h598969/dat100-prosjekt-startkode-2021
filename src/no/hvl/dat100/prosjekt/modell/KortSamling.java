@@ -86,14 +86,17 @@ public class KortSamling {
 	//Anders
 	public void leggTil(Kort kort) {
 	
+		samling[antall]=kort;
+		antall++;
+	}
 
-int length = samling.length;
-
-		samling = Arrays.copyOf(samling, length+1);
-		samling[length - 1] = kort;
-
-		}
-		
+//int length = samling.length;
+//
+//		samling = Arrays.copyOf(samling, length+1);
+//		samling[length - 1] = kort;
+//		
+//		}
+//		
 			
 	
 	
