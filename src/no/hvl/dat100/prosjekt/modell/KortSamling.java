@@ -86,7 +86,6 @@ public class KortSamling {
 	public void leggTil(Kort kort) {
 	
 int length = samling.length;
-		
 		samling = Arrays.copyOf(samling, length+1);
 		samling[length - 1] = kort;
 
