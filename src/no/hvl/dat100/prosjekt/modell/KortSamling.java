@@ -135,12 +135,10 @@ int length = samling.length;
 	 */
 	//Sivert
 	public Kort seSiste() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		if (samling[samling.length-1] == null) {
+			return null;
+		}
+		return samling[samling.length-1];
 		
 	}
 
