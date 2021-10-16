@@ -187,6 +187,7 @@ public class KortSamling {
 		while (!har && samling[i] != null) {
 			if (samling[i] == kort) {
 				har = true;
+				break;
 			}
 			i++;
 		}
@@ -207,7 +208,7 @@ public class KortSamling {
 	public boolean fjern(Kort kort) {
 		
 		for(int i=0; i<samling.length; i++) {
-			if(samling[i] == kort) {
+			if(samling[i] == kort && samling[i] != null) {
 				samling[i]=null;
 				antall--;
 			return true;
