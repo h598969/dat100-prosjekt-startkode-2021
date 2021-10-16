@@ -182,17 +182,12 @@ public class KortSamling {
 	 */
 	//Sivert
 	public boolean har(Kort kort) {
-		boolean har = false;
-		int i = 0;
-		while (!har && samling[i] != null) {
-			if (samling[i] == kort) {
-				har = true;
-				break;
-			}
-			i++;
-		}
-		return har;
 		
+		for(int i=0; i<samling.length; i++) {
+			if(samling[i] == kort && samling[i] != null) {
+				return true;
+			}
+		}return false;
 	}
 
 	/**
