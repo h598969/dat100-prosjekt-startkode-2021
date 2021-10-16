@@ -97,10 +97,9 @@ public class KortSamling {
 	 */
 	//Sivert
 	public void leggTilAlle() {
-		for (Kortfarge i : Kortfarge.values()) {
-			for (int j = 0; j<Regler.MAKS_KORT_FARGE; j++) {
-				samling[j] = new Kort(i,j);
-				antall++;
+		for (Kortfarge f : Kortfarge.values()) {
+			for (int i = 1; i <= Regler.MAKS_KORT_FARGE; i++) {
+				leggTil(new Kort(f,i));
 				}
 			}
 		}
