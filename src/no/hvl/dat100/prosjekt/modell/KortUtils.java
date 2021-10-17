@@ -22,7 +22,7 @@ public class KortUtils {
 		Kort[] samlingTemp= samling.getAllekort();
 		for(int i=0; i<length; i++) {
 			int minPos=0;
-			for(int j=1;j<length; j++) {
+			for(int j=0;j<length; j++) {
 				int tall=samlingTemp[j].compareTo(samlingTemp[minPos]);
 				if (tall<0) {
 					minPos=j;
@@ -30,11 +30,14 @@ public class KortUtils {
 				
 			}
 			temp[i]=samlingTemp[minPos];
+			Kort MAX_Value=new Kort(Kortfarge.Spar, 14);
+			samlingTemp[minPos]=MAX_Value;
+			// antar her at spar har høyest enum value. dersom dette ikke stemmer vil det bli feil når flere kortfarger benyttes.
 		}
 		samling.fjernAlle();
 		for(int i=0; i<length; i++) {
 			int minPos=0;
-			for(int j=1;j<length; j++) {
+			for(int j=0;j<length; j++) {
 				int tall=temp[j].compareTo(temp[minPos]);
 				if (tall<0) {
 					minPos=j;
@@ -42,6 +45,8 @@ public class KortUtils {
 				
 			}
 			samling.leggTil(temp[minPos]);
+			Kort MAX_Value=new Kort(Kortfarge.Spar, 14);
+			temp[minPos]=MAX_Value;
 		}
 	}
 	
