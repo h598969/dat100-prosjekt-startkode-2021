@@ -189,9 +189,12 @@ public class KortSamling {
 	 */
 	//Sivert
 	public boolean har(Kort kort) {
-		
+		if (kort == null) {
+			return false;
+		}
+	
 		for(int i=0; i<samling.length; i++) {
-			if(samling[i] == kort && samling[i] != null) {
+			if(samling[i] != null && samling[i].lik(kort)) {
 				return true;
 			}
 		}return false;
