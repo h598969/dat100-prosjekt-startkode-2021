@@ -133,17 +133,21 @@ public class KortSamling {
 	 */
 	//Sivert
 	public Kort seSiste() {
-		int siste = 0;
-		int neste = siste + 1;
+//		int siste = 0;
+//		int neste = siste + 1;
 //		for (int i = samling.length-1; i>=0; i--) {
 //			if (samling[i] != null) {
 //				siste = samling[i];
 //				break;
 //			}
 //		}
-		while (samling[neste] != null) {
-			siste++;
-			neste++;
+//		while (samling[neste] != null) {
+//			siste++;
+//			neste++;
+//		}
+		int siste=samling.length-1;
+		while (samling[siste]==null && siste>0) {
+			siste--;
 		}
 		return samling[siste];
 	}
@@ -157,12 +161,16 @@ public class KortSamling {
 	//Anders
 	public Kort taSiste() {
 		
-		int siste = 0;
-		int neste = siste + 1;
-		while (samling[neste] != null) {
-			siste++;
-			neste++;
-		}
+//		int siste = 0;
+//		int neste = siste + 1;
+//		while (samling[neste] != null) {
+//			siste++;
+//			neste++;
+//		}
+	int siste=samling.length-1;
+	while (samling[siste]==null && siste>0) {
+		siste--;
+	}
 		
 		Kort ref = samling[siste];
 		samling[siste] = null;
