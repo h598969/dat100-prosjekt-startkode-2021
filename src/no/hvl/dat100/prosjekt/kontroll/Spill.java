@@ -28,11 +28,7 @@ public class Spill {
 	
 	public Spill() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("Spill"));
-		// TODO - END
-		
+		bord=new Bord();
 	}
 	
 	/**
@@ -42,11 +38,7 @@ public class Spill {
 	 */
 	public Bord getBord() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return bord;
 		
 	}
 	
@@ -57,11 +49,7 @@ public class Spill {
 	 */
 	public ISpiller getSyd() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return syd;
 		
 	}
 
@@ -72,11 +60,7 @@ public class Spill {
 	 */
 	public ISpiller getNord() {
 		
-		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return nord;
 	}
 
 	/**
@@ -90,10 +74,25 @@ public class Spill {
 	 */
 	public void start() {
 		
-		// TODO - START
+		Spiller nordSpiller =new Spiller(nord);
+		Spiller sydSpiller =new Spiller(syd);
+		KortSamling bunkeFra=bord.getBunkeFra();
+		KortSamling bunkeTil=bord.getBunkeTil();
+		bunkeFra.leggTilAlle();
+		KortUtils.stokk(bunkeFra);
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		for (int i=0; i<ANTALL_KORT_START; i++) {
+		nordSpiller.leggTilKort(bunkeFra.taSiste());
+		sydSpiller.leggTilKort(bunkeFra.taSiste());
+		}
+		bunkeTil.leggTil(bunkeFra.taSiste());
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	/**
