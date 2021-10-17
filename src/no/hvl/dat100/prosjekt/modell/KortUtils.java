@@ -32,7 +32,7 @@ public class KortUtils {
 			temp[i]=samlingTemp[minPos];
 			Kort MAX_Value=new Kort(Kortfarge.Spar, 14);
 			samlingTemp[minPos]=MAX_Value;
-			// antar her at spar har høyest enum value. dersom dette ikke stemmer vil det bli feil når flere kortfarger benyttes.
+			// antar her at spar har hï¿½yest enum value. dersom dette ikke stemmer vil det bli feil nï¿½r flere kortfarger benyttes.
 		}
 		samling.fjernAlle();
 		for(int i=0; i<length; i++) {
