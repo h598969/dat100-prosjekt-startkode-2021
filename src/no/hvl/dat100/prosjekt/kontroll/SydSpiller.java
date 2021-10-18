@@ -55,7 +55,8 @@ public class SydSpiller extends Spiller {
 		// Hvilke kort kan spilles
 		for (Kort k : hand) {
 			if (Regler.kanLeggeNed(k, topp)) {
-				}lovlige.leggTil(k);
+					lovlige.leggTil(k);
+				}
 	
 			}
 
@@ -70,11 +71,7 @@ public class SydSpiller extends Spiller {
 		
 		if (spillFra != null) {
 			
-			Random r = new Random();
-			int p = r.nextInt(spillFra.length);
-			spill = spillFra[p];
-			handling = new Handling(HandlingsType.LEGGNED, spill);
-		
+			
 			
 		} else if (getAntallTrekk() < Regler.maksTrekk()) {
 			handling = new Handling(HandlingsType.TREKK, null);
