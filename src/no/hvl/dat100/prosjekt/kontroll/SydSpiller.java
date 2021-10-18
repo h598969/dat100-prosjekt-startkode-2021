@@ -55,9 +55,8 @@ public class SydSpiller extends Spiller {
 		// Hvilke kort kan spilles
 		for (Kort k : hand) {
 			if (Regler.kanLeggeNed(k, topp)) {
-				} else {
-					lovlige.leggTil(k);
-				}
+				}lovlige.leggTil(k);
+	
 			}
 
 		Kort spill = null;
