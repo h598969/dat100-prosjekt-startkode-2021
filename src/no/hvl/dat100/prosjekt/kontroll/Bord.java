@@ -23,6 +23,7 @@ public class Bord {
 	public Bord() {
 		bunkeFra = new KortSamling();
 		bunkeFra.leggTilAlle();
+		KortUtils.stokk(bunkeFra);
 		bunkeTil = new KortSamling();
 	}
 	
