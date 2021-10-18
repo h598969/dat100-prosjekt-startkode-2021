@@ -31,6 +31,8 @@ public class Spill {
 	public Spill() {
 		
 		bord=new Bord();
+		syd=new SydSpiller(Spillere.SYD);
+		nord=new NordSpiller(Spillere.NORD);
 	}
 	
 	/**
@@ -76,9 +78,9 @@ public class Spill {
 	 */
 	public void start() {
 		
-		syd=new SydSpiller(Spillere.SYD);
-		nord=new NordSpiller(Spillere.NORD);
+		
 		//til og fra bunke opprettet i constructor for bord.
+		//spillere opprettet i constructor
 		delutKort();
 		bord.vendOversteFraBunke();
 		
@@ -189,19 +191,20 @@ public class Spill {
 
 		// TODO - START
 		Kort kort = null;
-
+		
 		// Hint: del opp i de tre mulige handlinger og vurder 
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
-				
-		if (handling.equals(HandlingsType.FORBI)){
+		
+		
+		if (handling.getType().equals(HandlingsType.FORBI)){
 			forbiSpiller(spiller);
 			return null;
-		}else if(handling.equals(HandlingsType.LEGGNED)) {
+		}else if(handling.getType().equals(HandlingsType.LEGGNED)) {
 			kort=handling.getKort();
 			leggnedKort(spiller,kort);
 			return kort;
-		}else if(handling.equals(HandlingsType.TREKK)) {
+		}else if(handling.getType().equals(HandlingsType.TREKK)) {
 			kort=trekkFraBunke(spiller);
 			return kort;
 		}else return null;
