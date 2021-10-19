@@ -146,7 +146,7 @@ public class KortSamling {
 //			neste++;
 //		}
 		int siste=samling.length-1;
-		while (samling[siste].equals(null) && siste>0) {
+		while (samling[siste]==(null) && siste>0) {
 			siste--;
 		}
 		return samling[siste];
